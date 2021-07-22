@@ -22,6 +22,8 @@
     <Folder Include="wwwroot\fileman\tmp\" />
     <Folder Include="wwwroot\fileman\Uploads\Documents\" />
     <Folder Include="wwwroot\fileman\Uploads\FLV\" />
+    <Folder Include="wwwroot\_files\Temp\" />
+    <Folder Include="wwwroot\_files\uploadimages\" />
   </ItemGroup>
 
   <ItemGroup>

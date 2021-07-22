@@ -16,46 +16,34 @@ namespace Redmask.Taghelpers.TagHelpers
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            var dt = Model.Model != null ? (DateTime)Model.Model : DateTime.Now;
-            dt = dt == DateTime.MinValue ? DateTime.Now : dt;
+            var dt = Model.Model != null ? (DateTime?)Model.Model :null;
             var enabletimepicker = "true";
-            output.Content.SetHtmlContent(
-                 "<div class='input-group'" +
-                 ">" +
-                 "   <div class='input-group-addon'                           " +
-                 "     data-mddatetimepicker='true'                           " +
-                 "     data-targetselector='#" + Model.Name + "'              " +
-                 "     data-trigger='click'                                   " +
-                 "     data-enabletimepicker='"+enabletimepicker+"'           " +
-                 "     data-isgregorian='false'                               " +
-                 "     data-placement='bottom'                                " +
-                 "     style='padding: 2px 12px;'>                            " +
-                 "       <span class='la la-calendar la-2x'></span>           " +
-                 "   </div>                                                   " +
-                 "   <input type = 'text' class='form-control' id='prefix" + Model.Name + "' value='" + ToPersian(dt) + "'" +
-                 "        data-mddatetimepicker='true'                        " +
-                 "        data-targetselector='#" + Model.Name + "'           " +
-                 "        data-trigger='click'                                " +
-                 "        data-enabletimepicker='" + enabletimepicker + "'    " +
-                 "        data-isgregorian='false'                            " +
-                 "        data-placement='bottom'                             " +
-                 "        data-englishnumber='false'                          " +
-                 "        readonly           />" +
-                 "   <input type='hidden' id='" + Model.Name + "' name='" + Model.Name + "' value='" + dt + "' />" +
-                 "   <script>" +
-                 "        $(document).ready(function () {" +
-                 "                $('#prefix" + Model.Name + "').change(function () {" +
-                 "                    var selectedDate = $(this).val();" +
-                 "                    $('#" + Model.Name + "').val(getGregorianDate(selectedDate));" +
-                 "                });" +
-                 "        });" +
-                 "   </script>" +
-                 "</div>"
-                );
+            output.Content.SetHtmlContent($@"
+<div class='input-group mb-3'>
+        <input class='form-control' id='{Model.Name}2' value='{(!dt.HasValue?"": ToPersian(dt.Value))}'>
+        <input type='hidden' id='{Model.Name}'  name='{Model.Name}'  value='{dt}'  />
+        <div class='input-group-prepend'>
+            <span class='input-group-text' id='basic-addon1'><i class='icofont-calendar'></i></span>
+        </div>
+</div>
+<script src='/lib/jquery/jquery.min.js'></script>
+<script> 
+     $(document).ready(function () {{ 
+        
+         $('#{Model.Name}2').MdPersianDateTimePicker({{
+                targetTextSelector: '#{Model.Name}2',
+                targetDateSelector: '#{Model.Name}',
+                enableTimePicker: false,
+                dateFormat: 'yyyy-MM-dd',
+                textFormat: 'yyyy/MM/dd',
+         }});
+    }}); 
+</script> 
+");
         }
         public static string ToPersian(DateTime d,bool includeTime=false)
         {
-            PersianCalendar pc = new PersianCalendar();
+            PersianCalendar pc = new ();
             return !includeTime? $"{pc.GetYear(d)}/{pc.GetMonth(d):00}/{pc.GetDayOfMonth(d):00}":
                 $"{pc.GetYear(d)}/{pc.GetMonth(d):00}/{pc.GetDayOfMonth(d):00} {d.Hour:00}:{d.Minute:00}";
         }
