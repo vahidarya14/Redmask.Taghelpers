@@ -26,8 +26,9 @@ namespace Redmask.Taghelpers.TagHelpers
             <span class='input-group-text' id='basic-addon1'><i class='icofont-calendar'></i></span>
         </div>
 </div>
-<script src='/lib/jquery/jquery.min.js'></script>
+{ScriptHelper.AddJquery()}
 <script> 
+   
      $(document).ready(function () {{ 
         
          $('#{Model.Name}2').MdPersianDateTimePicker({{

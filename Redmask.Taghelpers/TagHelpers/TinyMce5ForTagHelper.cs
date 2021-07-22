@@ -20,9 +20,9 @@ namespace Redmask.Taghelpers.TagHelpers
                 var c = AspFor.Model;
 
                 var aa = $@"<textarea name='{Id}' id='{Id}' class='form-control' >{c}</textarea>
-<script src='/lib/jquery/jquery.min.js'></script>
-<script src='/lib/tinymce5/tinymce.min.js'></script>
+{ScriptHelper.AddJquery()}
 <script>
+ {ScriptHelper.AddIfNotExsists("/lib/tinymce5/tinymce.min.js")}
     $().ready(function () {{
 
         tinyMCE.init({{
