@@ -15,6 +15,8 @@ namespace Redmask.Taghelpers.TagHelpers
         public double MinRatioHeightToWidth { get; set; } = .001;
         public double MaxRatioHeightToWidth { get; set; } = 100;
         public string DefaultAvatar { get; set; } = "/noIimage268.png";
+        public string ImgCss { get; set; }
+        public string ImgClass { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
@@ -25,7 +27,7 @@ namespace Redmask.Taghelpers.TagHelpers
 
             output.Content.SetHtmlContent($@"
 <script src='/lib/jquery/jquery.min.js'></script>
-<img src='{src}' id='{imgId}' style='height:100%; cursor:pointer;' />
+<img src='{FolderPath+'/'+src}' id='{imgId}' style='height:100%; cursor:pointer;min-height:50px;border:2px solid red;{ImgCss}' class='{ImgClass}' />
 <input type='file' name='{fileId}' id='{fileId}' style='display:none' accept='image/*' />"+
 "<script>" +
                                           "            $('#" + imgId + "').click(function () { $('#"+ fileId+"').trigger('click'); });" +
