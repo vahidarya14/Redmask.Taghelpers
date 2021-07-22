@@ -12,8 +12,8 @@
     <FileVersion>0.1.0.0</FileVersion>
     <IsPackable>true</IsPackable>
     <RepositoryUrl>https://github.com/vahidarya14/Redmask.Taghelpers</RepositoryUrl>
-    <PackageTags>mvc net 5,taghelpers,tinymce5 taghelper</PackageTags>
-    <Version>1.0.0.6</Version>
+    <PackageTags>mvc_net5,taghelpers,tinymce5,persianCalendarPicker,front-end</PackageTags>
+    <Version>1.0.0.7</Version>
     <Description>some usefull taghelpers such as
  tinymc5 + roxyfilenam , persian calendar picker , image chooser dialog(instead of file input) , social share btn</Description>
   </PropertyGroup>
@@ -33,6 +33,9 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>wwwroot\fileman\asp_net\main.ashx</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
     </Content>
     <Content Update="wwwroot\fileman\conf.json">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
