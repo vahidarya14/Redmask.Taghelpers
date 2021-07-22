@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.web">
+﻿<Project Sdk="Microsoft.NET.Sdk.web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -13,7 +13,9 @@
     <IsPackable>true</IsPackable>
     <RepositoryUrl>https://github.com/vahidarya14/Redmask.Taghelpers</RepositoryUrl>
     <PackageTags>mvc net 5,taghelpers,tinymce5 taghelper</PackageTags>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.6</Version>
+    <Description>some usefull taghelpers such as
+ tinymc5 + roxyfilenam , persian calendar picker , image chooser dialog(instead of file input) , social share btn</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,10 +32,12 @@
     <Content Update="wwwroot\fileman\asp_net\main.ashx">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\fileman\conf.json">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\fileman\css\images\animated-overlay.gif">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
@@ -110,6 +114,7 @@
     <Content Update="wwwroot\fileman\dev.html">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\fileman\images\action-folder-paste.png">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
@@ -1058,6 +1063,7 @@
     <Content Update="wwwroot\fileman\index.html">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\fileman\js\custom.js">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
@@ -1186,10 +1192,12 @@
     <Content Update="wwwroot\fileman\LICENSE.txt">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\fileman\third-party.txt">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\fileman\Uploads\Images\DSC_2987.jpg">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
@@ -1210,6 +1218,7 @@
     <Content Update="wwwroot\fileman\web.config">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\lib\fonts\A Iranian Sans.ttf">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
