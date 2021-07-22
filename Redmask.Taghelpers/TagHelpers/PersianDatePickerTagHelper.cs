@@ -27,6 +27,9 @@ namespace Redmask.Taghelpers.TagHelpers
         </div>
 </div>
 {ScriptHelper.AddJquery()}
+{ScriptHelper.AddScript("/lib/MD.BootstrapPersianDateTimePicker/jalaali.js")}
+{ScriptHelper.AddScript("/lib/MD.BootstrapPersianDateTimePicker/jquery.md.bootstrap.datetimepicker.js")}
+<link href='/lib/MD.BootstrapPersianDateTimePicker/jquery.md.bootstrap.datetimepicker.style.css' rel='stylesheet'>
 <script> 
    
      $(document).ready(function () {{ 

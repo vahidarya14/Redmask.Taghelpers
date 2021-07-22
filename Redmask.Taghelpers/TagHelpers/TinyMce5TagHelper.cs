@@ -18,8 +18,8 @@ namespace Redmask.Taghelpers.TagHelpers
 
             var aa = $@"<textarea name='{Id}' id='{Id}' class='form-control' >{c}</textarea>
 {ScriptHelper.AddJquery()}
+{ScriptHelper.AddScript("/lib/tinymce5/tinymce.min.js")}
 <script>
-     {ScriptHelper.AddIfNotExsists("/lib/tinymce5/tinymce.min.js")}
     $().ready(function () {{
 
         tinyMCE.init({{
