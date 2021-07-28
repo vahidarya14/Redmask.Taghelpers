@@ -1,4 +1,4 @@
-# Redmask.Taghelpers
+# taghelpers
 
   ## imageChooser
   ```html
