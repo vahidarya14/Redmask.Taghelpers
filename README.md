@@ -18,6 +18,6 @@ and make these tow folders in side wwwroot "/_files/Temp" and   "/_files/uploadi
    <TinyMce5For asp-for="FullText"></TinyMce5For>
 ```
 
-# themeable
+# Themeable
   add Theme folder to your project and set Themes name(which is folder name) into IMemoryCache with key "Theme"
   it loads .cshtml from /Themes/{theme_name}
