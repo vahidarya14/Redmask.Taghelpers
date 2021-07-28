@@ -15,3 +15,7 @@
   ```html
    <TinyMce5For asp-for="FullText"></TinyMce5For>
 ```
+
+# themeable
+  add Theme folder to your project and set Themes name(which is folder name) into IMemoryCache with key "Theme"
+  it loads .cshtml from /Themes/{theme_name}
