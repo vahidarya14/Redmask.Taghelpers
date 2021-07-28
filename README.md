@@ -1,4 +1,4 @@
-# taghelpers
+
 do not forget to download wwwroot from repository and add to your project
 and make these tow folders in side wwwroot "/_files/Temp" and   "/_files/uploadimages";
 
