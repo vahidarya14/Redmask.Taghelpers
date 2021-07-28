@@ -1,5 +1,5 @@
 # taghelpers
-do not forget to download wwwroot from repository and add to your projet
+do not forget to download wwwroot from repository and add to your project
 
   ## imageChooser
   ```html
