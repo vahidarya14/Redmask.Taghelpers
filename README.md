@@ -1,6 +1,9 @@
 
-do not forget to download wwwroot from repository and add to your project
-and make these tow folders in side wwwroot "/_files/Temp" and   "/_files/uploadimages";
+1) add @addTagHelper *,Redmask.Taghelpers to _ViewImport.cshtml
+
+2) do not forget to download wwwroot from repository and add to your project . url is https://github.com/vahidarya14/Redmask.Taghelpers/tree/master/Redmask.Taghelpers/wwwroot
+
+3) make these tow folders in side wwwroot "/_files/Temp" and "/_files/uploadimages"
 
   ## imageChooser
   ```html
